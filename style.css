@@ -58,10 +58,37 @@ header {
 .card p {
     font-size: 2rem;
     line-height: 3rem;
-    margin-top: 1rem;
+    margin-top: 0.5rem;
 
 }
-.card.green {
+.card.black {
     background: black;
     color:azure;
+}
+#data-table {
+    width: 100%;
+    border-spacing:0 0.5rem ;
+}
+table td {
+    opacity: 0.5
+}
+
+
+table tr:hover {
+    opacity: 1
+}
+table th {
+    background: rgb(71, 67, 67);
+    color: aliceblue;
+    font-weight: normal;
+    padding: 1rem 2rem;
+    text-align: center;
+    border-radius: 0.4rem;
+}
+
+table td {
+    background: gainsboro;
+    border-radius: 0.4rem;
+    text-align: center;
+    font-weight: normal;
 }
