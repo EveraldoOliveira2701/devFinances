@@ -23,14 +23,14 @@
             <h2 class="sr-only"> Balanço</h2>
             <div class="card">
                 <H3>
-                    <span>Entradas</span>   
+                    <span id="entrada">Entradas</span>   
                     <img src="./myImagens/entrada.svg" alt="Imagem de entradas">
                     </H3>
                 <p>R$ 5.000,00</p>
             </div>
             <div class="card">
                 <H3>
-                    <span>Saídas</span>
+                    <span id="saida">Saídas</span>
                     <img src="./myImagens/envio.svg" alt="Imagem de saida">
 
                 </H3>
@@ -38,7 +38,7 @@
             </div>
             <div class="card black"> 
                 <H3>
-                    <span>Total </span>
+                    <span id="total">Total </span>
                     <img src="./myImagens/saco-de-dolar.svg" alt="imagen de dinheiro">
                 </H3>
                 <p>R$ 3.000,00</p>
@@ -46,6 +46,7 @@
         </section>
         <section id="transaction">
             <h2 class="sr-only"> Transações</h2>
+            <a href="a" class="button new"> + Nova Transação</a>
         </section>
         <table id="data-table">
             <thead>
@@ -53,6 +54,7 @@
                     <th>Decrição</th>
                     <th>Valor</th>
                     <Th>Data</Th>
+                    <th>Remove</th>
                 </tr>
             </thead>
             <tbody>
@@ -60,21 +62,33 @@
                     <td class="description">Luz</td>
                     <td class="expense"> - R$ 500,00</td>
                     <td class="date">23/08/2022</td>
+                    <td>
+                        <img src="" alt="">
+                    </td>
                 </tr>
                 <tr>
                     <td class="description">Aluguel</td>
                     <td class="expense"> - R$ 1500,00</td>
                     <td class="date">23/08/2022</td>
+                    <td>
+                        <img src="" alt="">
+                    </td>
                 </tr>
                 <tr>
                     <td class="description">Internet</td>
                     <td class="expense"> - R$ 100,00</td>
                     <td class="date">23/08/2022</td>
+                    <td>
+                        <img src="" alt="">
+                    </td>
                 </tr>
                 <tr>
                     <td class="description">Venda</td>
                     <td class="income"> R$ 5100,00</td>
                     <td class="date">23/08/2022</td>
+                    <td>
+                        <img src="" alt="">
+                    </td>
                 </tr>
             </tbody>
         </table>
