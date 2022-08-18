@@ -22,7 +22,9 @@ body {
     color: black;
     margin: auto;
     width: min(90vw,800px);
-    
+}
+h1 {
+    color:aliceblue;
 }
 h2{
     margin-top: 3.2rem;
