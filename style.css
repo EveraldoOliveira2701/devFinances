@@ -6,9 +6,17 @@
 
 body {
     background: rgb(204, 202, 202);
-    font-family: 'Merriweather', serif, sans-serif;
-    
-    
+    font-family: 'Merriweather', serif, sans-serif;   
+}
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: 0;
 }
 .container {
     color: black;
@@ -87,7 +95,6 @@ table tbody th {
     font-weight: normal;
     padding: 1rem 2rem;
     text-align: center;
-   
 }
 table tbody td {
     background: gainsboro;
@@ -97,4 +104,18 @@ table tbody td {
 }
 table thead tr th {
     border-radius: 0.5rem;
+}
+td.description {
+    color: blue;
+}
+td.income {
+    color:green;
+}
+td.expense {
+    color:red;
+}
+footer{
+    text-align: center;
+    padding: 4rem 0 2rem;
+    color:blue;
 }
