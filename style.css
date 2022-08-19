@@ -3,7 +3,9 @@
     padding: o;
     box-sizing: border-box;
 }
-
+html {
+    font-size: 93.75%;
+}
 body {
     background: rgb(204, 202, 202);
     font-family: 'Merriweather', serif, sans-serif;   
@@ -24,16 +26,13 @@ body {
     width: min(90vw,800px);
 }
 #entrada{
-    color: green;
-   
+    color: green;   
 }
 #saida{
-    color: red;
-    
+    color: red;   
 }
 #total{
     color: yellow;
-    
 }
 a {
     color:blue;
@@ -58,23 +57,18 @@ header {
     background: rgb(10, 10, 10);
     padding: 2rem 0 10rem;
     text-align: center;
-   
-
 }
 #logo {
     font-weight: 200;
     color:beige;
-
 }
 #balance {
-    margin-top: -8rem;
-   
+    margin-top: -8rem;   
 }
 #balance h2{
     color:white;
     margin-top: 0;
     margin-bottom: 1,5rem;
-    
 }
 thead {
     background: rgb(71, 67, 67);
@@ -105,13 +99,14 @@ thead {
     margin-top: 0.5rem;
 }
 .card.black {
-    background: black;
+    background: rgb(65, 60, 60);
     color:azure;
 }
-#data-table {
+#data-table {  
     width: 100%;
-    border-spacing: 0 0.5rem;    
-}
+    border-spacing: 0 0.5rem;   
+    overflow-x: auto; 
+    }
 table thead tr th:first-child,
 table tbody tr td:first-child
 {
@@ -151,4 +146,14 @@ footer{
     text-align: center;
     padding: 4rem 0 2rem;
     color:blue;
+}
+@media (min-width: 800px) {
+html {
+    font-size: 87.5%;
+}
+#balance {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap:2rem;
+}
 }
