@@ -53,7 +53,7 @@
                 <tr>
                     <th>Decrição</th>
                     <th>Valor</th>
-                    <Th>Data</Th>
+                    <th>Data</th>
                     <th>Remove</th>
                 </tr>
             </thead>
@@ -63,7 +63,7 @@
                     <td class="expense"> - R$ 500,00</td>
                     <td class="date">23/08/2022</td>
                     <td>
-                        <img src="" alt="">
+                        <img src="myImagens/lixo.svg" alt="Apagar registro">
                     </td>
                 </tr>
                 <tr>
@@ -71,7 +71,7 @@
                     <td class="expense"> - R$ 1500,00</td>
                     <td class="date">23/08/2022</td>
                     <td>
-                        <img src="" alt="">
+                        <img src="myImagens/lixo.svg" alt="Apagar registro">
                     </td>
                 </tr>
                 <tr>
@@ -79,7 +79,7 @@
                     <td class="expense"> - R$ 100,00</td>
                     <td class="date">23/08/2022</td>
                     <td>
-                        <img src="" alt="">
+                        <img src="myImagens/lixo.svg" alt="Apagar registro">
                     </td>
                 </tr>
                 <tr>
@@ -87,7 +87,7 @@
                     <td class="income"> R$ 5100,00</td>
                     <td class="date">23/08/2022</td>
                     <td>
-                        <img src="" alt="">
+                        <img src="myImagens/circulo-usd.svg" alt="Novo registro">
                     </td>
                 </tr>
             </tbody>
@@ -104,8 +104,18 @@
                     </div>
                     <div class="input-group">
                         <label class="sr-only"for="amount">Valor</label>
-                        <input type="number"id="amount"nome="description"placeholder="Valor">
+                        <input type="number"step="0.01"id="amount"nome="description"placeholder="Valor">
+                        <small class="Ajuda">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
                     </div>
+                    <div class="input-group">
+                        <label class="sr-only"for="date">Data</label>
+                        <input type="date"id="date"nome="date">
+                    </div>
+                    <div class="input-group actions">
+                        <a href="a" class="button cancel">Cancelar</a>
+                        <button>Salvar</button>
+                    </div>
+
                 </form>
             </div> 
         </div>
