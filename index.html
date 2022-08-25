@@ -44,56 +44,63 @@
                 <p>R$ 3.000,00</p>
             </div>           
         </section>
-        <section id="transaction">
-            <h2 class="sr-only"> Transações</h2>
-            <a href="a" class="button new"> + Nova Transação</a>
-        </section>
-        <table id="data-table">
-            <thead>
+        <section id="transaction">            
+            <h2 class="sr-only"> Transações
+            </h2>
+            <a onclick = "Modal.open()" href="#"            
+                class="button new"> + Nova Transação
+            </a>
+            <table id="data-table">
+                <thead>
                 <tr>
-                    <th>Decrição</th>
-                    <th>Valor</th>
-                    <th>Data</th>
-                    <th>Remove</th>
+                <th>Decrição</th>
+                <th>Valor</th>
+                <th>Data</th>
+                <th>Remove</th>
                 </tr>
-            </thead>
-            <tbody>
-                <tr>
+                </thead>
+                <tbody>
+                       
+                    
+                    <tr>
                     <td class="description">Luz</td>
                     <td class="expense"> - R$ 500,00</td>
                     <td class="date">23/08/2022</td>
                     <td>
                         <img src="myImagens/lixo.svg" alt="Apagar registro">
                     </td>
-                </tr>
-                <tr>
+                        </tr>
+                     <tr>
                     <td class="description">Aluguel</td>
                     <td class="expense"> - R$ 1500,00</td>
                     <td class="date">23/08/2022</td>
                     <td>
                         <img src="myImagens/lixo.svg" alt="Apagar registro">
                     </td>
-                </tr>
-                <tr>
+                        </tr>
+                        <tr>
                     <td class="description">Internet</td>
                     <td class="expense"> - R$ 100,00</td>
                     <td class="date">23/08/2022</td>
                     <td>
                         <img src="myImagens/lixo.svg" alt="Apagar registro">
                     </td>
-                </tr>
-                <tr>
+                        </tr>
+                    <tr>
                     <td class="description">Venda</td>
                     <td class="income"> R$ 5100,00</td>
                     <td class="date">23/08/2022</td>
                     <td>
                         <img src="myImagens/circulo-usd.svg" alt="Novo registro">
                     </td>
-                </tr>
-            </tbody>
-        </table>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </section>
     </main>
-    <div class="modal-overlay active">
+    <div class="modal-overlay">
         <div class="modal"> 
             <div id="form">
                 <h2>Nova Transação</h2>
@@ -105,14 +112,17 @@
                     <div class="input-group">
                         <label class="sr-only"for="amount">Valor</label>
                         <input type="number"step="0.01"id="amount"nome="description"placeholder="Valor">
-                        <small class="Ajuda">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais</small>
+                        <small class="Ajuda">Use o sinal - (negativo) para despesas e , (virgula) para casas decimais.</small>
                     </div>
                     <div class="input-group">
                         <label class="sr-only"for="date">Data</label>
                         <input type="date"id="date"nome="date">
                     </div>
                     <div class="input-group actions">
-                        <a href="a" class="button cancel">Cancelar</a>
+                        <a   onclick = "Modal2.close()"
+                            href="#" class="button cancel">Cancelar
+                           
+                        </a>
                         <button>Salvar</button>
                     </div>
 
@@ -120,10 +130,14 @@
             </div> 
         </div>
     </div>
-    <footer>
-        <link rel="script" href="script.js">
+    <footer id="foot">
         <p>@Everaldo2701</p>
     </footer>
+    <script
+        src="./script.js">
+    </script>
+  
+  
 </body>
 
 </html>

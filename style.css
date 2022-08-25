@@ -189,7 +189,9 @@ td.expense {
     display: flex;
     align-items: center;
     justify-content: center;
-    opacity: 0;   
+    opacity: 0;  
+    visibility: hidden;
+    z-index: 999; 
 }
 .modal-overlay.active {
     opacity: 1;
