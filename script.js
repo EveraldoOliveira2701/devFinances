@@ -108,24 +108,73 @@ const tr = document.createElement('tr')
         document.getElementById('totalDisplay')
         .innerHTML = Utils.formatCurrency(Transaction.total())
     },
-    clearTudo(){
+    clearTransactions(){
         DOM.transactionsContainer.innerHTML = ""
     }
 }
 const Utils = {
+    formatAmount(value) {
+        value = Number(value) * 100
+        return value
+    },
+    formatDate(date){
+        const splittedDate = date.split("-") 
+        return `${splittedDate[2]}/${splittedDate[1]}/${splittedDate[0]}`       
+    },
     formatCurrency(value) {
         const signal = Number(value) < 0 ? "-" : ""
         value = String(value).replace(/\D/g , "")
         value = Number(value)/100
-        value = value.toLocaleString("pt-BR", { style : "currency", currency :'BRL'})
-        console.log(value)      
+        value = value.toLocaleString("pt-BR", { style : "currency", currency :'BRL'})      
         return signal + value
     }
 }
 const Form = {
-  submit(event){
-    console.log(event)
-  }  
+    //verificar se as informações foram preenchidas
+   description: document.querySelector('input#description'),
+   amount: document.querySelector('input#amount'),
+   date: document.querySelector('input#date'),
+   getValues(){
+    return{
+        description: Form.description.value,
+        amount: Form.amount.value,
+        date: Form.date.value
+    }
+   },
+   validateFields(){
+    const { description, amount, date} = Form.getValues()
+    if (description.trim() === "" ||
+        amount.trim() === "" ||
+        date.trim() === "" ) {
+        throw new Error("Por favor, preencha todos os campos.")
+    }
+   },
+   formatValues(){
+    let {description, amount, date } = Form.getValues()
+    amount = Utils.formatAmount(amount)
+    date = Utils.formatDate(date)
+   return {
+    description, amount, date
+   }
+
+   },
+   clearFields(){
+    Form.description.value = ""
+    Form.amount.value = ""
+    Form.date.value = ""
+   },
+   submit(event){
+       event.preventDefault()
+        try{
+            Form.validateFields() 
+            const transaction = Form.formatValues()  //formatar os dados para salvar
+            Transaction.add(transaction) //salvar
+            Form.clearFields() //limpar o form
+        }
+       catch (error) {alert(error.message)}
+   }      
+    //close modal
+    //atualizar app
 }
 const App = {
     init(){    
@@ -135,7 +184,7 @@ const App = {
         DOM.updateBalance()
     },
     reload(){
-        DOM.clearTudo()
+        DOM.clearTransactions()
         App.init()
     },
 }
