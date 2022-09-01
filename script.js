@@ -18,39 +18,41 @@ class ModalClass {
         document.querySelector('.modal-overlay')
         .classList.remove('active')
     }
+    
 }
-//const Modal = new ModalClass();
-const transactions = [{
-   
-    description: "Luz",
-    amount: -50000,
-    date: '23/09/2022',
-},
-{ 
-    description: "Website",
-    amount: 500000,
-    date: '03/09/2022',
-},
-{ 
-    description: "Água",
-    amount: -20000,
-    date: '29/09/2022',
-},
-{ 
-    description: "App",
-    amount: 20000,
-    date: '29/09/2022',
-},
-]
+const Modal = new ModalClass();
+
 const Transaction = {
-    all: transactions,
+    all: [{
+   
+        description: "Luz",
+        amount: -50000,
+        date: '23/09/2022',
+    },
+    { 
+        description: "Website",
+        amount: 500000,
+        date: '03/09/2022',
+    },
+    { 
+        description: "Água",
+        amount: -20000,
+        date: '29/09/2022',
+    },
+    { 
+        description: "App",
+        amount: 20000,
+        date: '29/09/2022',
+    }
+    ],
     //adiciona nova linha na tabela
     add(transaction) {
         Transaction.all.push(transaction)
         App.reload()
     },
     remove(index){
-
+    Transaction.all.splice(index, 1)
+    App.reload()
     },
     incomes(){
         let income = 0;
@@ -119,6 +121,11 @@ const Utils = {
         console.log(value)      
         return signal + value
     }
+}
+const Form = {
+  submit(event){
+    console.log(event)
+  }  
 }
 const App = {
     init(){    
